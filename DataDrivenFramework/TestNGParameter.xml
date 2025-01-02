@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<suite name="Login Suite">
+<suite name="Login Suite Using TestNG Parameter">
 
     <!--        This is from extentreports-testng-adapter dependency-->
     <listeners>
@@ -9,29 +9,33 @@
     <test name="BothCorrect">
         <parameter name="username" value="Admin"></parameter>
         <parameter name="password" value="admin123"></parameter>
+        <parameter name="validation" value="valid"></parameter>
         <classes>
-            <class name="LoginTestCases.BothCorrect"/>
+            <class name="DataDrivenTests.LoginUsingParameter"/>
         </classes>
     </test>
     <test name="BothInCorrect">
         <parameter name="username" value="Dummy Admin"></parameter>
         <parameter name="password" value="Dummy admin123"></parameter>
+        <parameter name="validation" value="invaild"></parameter>
         <classes>
-            <class name="LoginTestCases.BothInCorrect"/>
+            <class name="DataDrivenTests.LoginUsingParameter"/>
         </classes>
     </test>
     <test name="CorrectPassword">
         <parameter name="username" value="Dummy Admin"></parameter>
         <parameter name="password" value="admin123"></parameter>
+        <parameter name="validation"  value="invaild"></parameter>
         <classes>
-            <class name="LoginTestCases.CorrectPassword"/>
+            <class name="DataDrivenTests.LoginUsingParameter"/>
         </classes>
     </test>
     <test name="CorrectUsername">
         <parameter name="username" value="Admin"></parameter>
         <parameter name="password" value="dummy admin123"></parameter>
+        <parameter name="validation"  value="invaild"></parameter>
         <classes>
-            <class name="LoginTestCases.CorrectUsername"/>
+            <class name="DataDrivenTests.LoginUsingParameter"/>
         </classes>
     </test>
 </suite>

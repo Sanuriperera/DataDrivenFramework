@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name="Login Suite Using TestNG Excel Data Provider">
+
+    <!--        This is from extentreports-testng-adapter dependency-->
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>
+    </listeners>
+
+    <test name="ExcelDataProviderTest">
+        <classes>
+            <class name="DataDrivenTests.LoginUsingDataProviderByReadingExcel"/>
+        </classes>
+    </test>
+
+</suite>
